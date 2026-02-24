@@ -24,7 +24,11 @@ resource "aws_security_group" "allow_tls" { #this is for terraform reference
     ipv6_cidr_blocks = ["::/0"]
   }
 
-tags = local.ec2_final_tags
+tags = {
+    Name = "allow-all-terraform"
+  }
 }
+
+
 
 
